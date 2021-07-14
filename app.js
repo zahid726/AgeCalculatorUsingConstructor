@@ -3,7 +3,9 @@ let dob= document.getElementById('dob');
 let button= document.getElementById('button')
 let outputName= document.getElementById('outputName');
 let outAge= document.getElementById('outputAge')
-// employee constractor
+const display3 =document.getElementById('display');
+display3.style.display='none';
+
 button.addEventListener('click',function(){
    let Name= Pname.value;
    let Dob= dob.value
@@ -19,10 +21,9 @@ button.addEventListener('click',function(){
 
    }
    const hussain = new Person("hussain",'5 june 2010')
-   console.log
    const newperosn= new Person(Name, Dob)
-   console.log(newperosn.calculateAge())
-
+ display3.style.display="block";
+   
    outputName.textContent= Name;
    outAge.textContent=newperosn.calculateAge()
 })
